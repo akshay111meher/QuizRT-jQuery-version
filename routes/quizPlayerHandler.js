@@ -24,7 +24,7 @@ router.post('/quizData', function(req, res, next) {
   Quiz.find(function(err,data){
       if(err) console.log(err);
       var rn = Math.floor((Math.random() * 3) + 0);
-      quiz=data[2];
+      quiz=data[1];
       res.setHeader('Content-Type', 'application/json');
       res.json(quiz);
   });
